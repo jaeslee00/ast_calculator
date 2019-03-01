@@ -6,7 +6,7 @@
 /*   By: jaelee <jaelee@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/24 19:58:46 by jaelee            #+#    #+#             */
-/*   Updated: 2019/02/25 06:08:51 by jaelee           ###   ########.fr       */
+/*   Updated: 2019/03/01 17:55:55 by jaelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	store_integer(t_parser *parser, t_token *token)
 		ft_exit(parser);
 	}
 	token->value = ft_atoi(buf);
-	token->type = FT_INTEGER;
+	token->type = _INTEGER;
 }
 
 void	store_tokens(t_parser *parser,
@@ -48,17 +48,17 @@ void	store_tokens(t_parser *parser,
 void	store_others(t_parser *parser, t_token *token)
 {
 	if (parser->curr_char == '+')
-		store_tokens(parser, token, FT_ADD, '+');
+		store_tokens(parser, token, _ADD, '+');
 	else if (parser->curr_char == '-')
-		store_tokens(parser, token, FT_SUB, '-');
+		store_tokens(parser, token, _SUB, '-');
 	else if (parser->curr_char == '*')
-		store_tokens(parser, token, FT_MUL, '*');
+		store_tokens(parser, token, _MUL, '*');
 	else if (parser->curr_char == '/')
-		store_tokens(parser, token, FT_DIV, '/');
+		store_tokens(parser, token, _DIV, '/');
 	else if (parser->curr_char == '(')
-		store_tokens(parser, token, FT_LPAREN, '(');
+		store_tokens(parser, token, _LPAREN, '(');
 	else if (parser->curr_char == ')')
-		store_tokens(parser, token, FT_RPAREN, ')');
+		store_tokens(parser, token, _RPAREN, ')');
 	else
 	{
 		printf("Invalid character: %c\n", parser->curr_char);
@@ -99,6 +99,6 @@ t_token	*get_next_token(t_parser *parser)
 		parser->curr_char = parser->input[parser->pos];
 		return (token);
 	}
-	store_tokens(parser, token, FT_EOF, 0);
+	store_tokens(parser, token, _EOF, 0);
 	return (token);
 }

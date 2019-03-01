@@ -6,7 +6,7 @@
 /*   By: jaelee <jaelee@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/23 03:25:39 by jaelee            #+#    #+#             */
-/*   Updated: 2019/02/27 04:31:57 by jaelee           ###   ########.fr       */
+/*   Updated: 2019/03/01 17:55:54 by jaelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,10 @@ int		main(int argc, char **argv)
 	{
 		init_program(&parser, argv[1]);
 		parser.ptr_ast = expr(&parser);
-		eat(&parser, FT_EOF);
+		eat(&parser, _EOF);
 		print_all(parser.ptr_ast);
-		printf("result = %ld\n", interpreter(parser.ptr_ast));
+		if (parser.ptr_ast)
+			printf("result = %ld\n", interpreter(parser.ptr_ast));
 		free_program(parser.ptr_ast);
 	}
 	else

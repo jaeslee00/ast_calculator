@@ -6,7 +6,7 @@
 /*   By: jaelee <jaelee@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/23 03:27:07 by jaelee            #+#    #+#             */
-/*   Updated: 2019/02/27 04:11:25 by jaelee           ###   ########.fr       */
+/*   Updated: 2019/03/01 16:55:07 by jaelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@
 
 typedef enum	e_type
 {
-	FT_INTEGER,
-	FT_UNARY_ADD,
-	FT_UNARY_SUB,
-	FT_ADD,
-	FT_SUB,
-	FT_MUL,
-	FT_DIV,
-	FT_LPAREN,
-	FT_RPAREN,
-	FT_EOF
+	_INTEGER,
+	_UNARY_ADD,
+	_UNARY_SUB,
+	_ADD,
+	_SUB,
+	_MUL,
+	_DIV,
+	_LPAREN,
+	_RPAREN,
+	_EOF
 }				e_type;
 
 typedef struct	s_token
