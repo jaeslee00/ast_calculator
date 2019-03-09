@@ -7,5 +7,5 @@
   * Supports Arithmetic operations and brackets only
 
 ### installation and execution
-make
+make\
 ./ast_calculator "expressions"
