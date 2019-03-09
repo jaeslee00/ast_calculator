@@ -1,4 +1,11 @@
-AST_calculator
+# AST_Calculator
 
-A simple INTEGER calculator using Abstract Syntax Tree.
-It is made for understanding how AST parses input and interprets it.
+## A simple INTEGER calculator using Abstract Syntax Tree.
+<hr>
+
+* Implementation of Abstract Syntax Tree to recreate simple INTEGER calculator
+  * Supports Arithmetic operations and brackets only
+
+### installation
+> make
+> ./ast_calculator "expressions"
