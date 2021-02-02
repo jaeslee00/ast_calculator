@@ -11,6 +11,8 @@ class Token(object):
 			type = self.type,
 			value = self.value
 		)
+	def test2(self):
+		return "test2"
 
 class Lexer(object):
 	def __init__(self, text):
